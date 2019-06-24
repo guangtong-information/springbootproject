@@ -13,14 +13,19 @@ import com.ypy.springinaction.first.lifecycle.Dog;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 启动类
+ * 知识点1、使用配置类加载Bean
+ * 知识点2、使用FactoryBean创建Bean
+ * 知识点3、使用注解加载Bean
+ * 知识点4、使用@Primary注解告诉容器优先加载那个Bean
+ * 知识点5、Bean的生命周期（Bean自身、Bean级别）
+ * 知识点6、Bean的依赖注入三种方式
  */
 public class App {
 
     public static void main(String[] args) {
 
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(MyConfig.class, User.class, UserDao.class, UserServer.class);
-        // 知识点1：使用配置文件加载Bean
+        // 知识点1：使用配置类加载Bean
         // 根据类型获取对象
         System.out.println(annotationConfigApplicationContext.getBean(MyBean.class));
         // 根据名称获取对象，类似于spring配置文件中的id
