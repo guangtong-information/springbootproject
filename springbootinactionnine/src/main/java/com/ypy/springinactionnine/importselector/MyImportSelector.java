@@ -1,5 +1,6 @@
 package com.ypy.springinactionnine.importselector;
 
+import com.ypy.springinactionnine.myannotation.EnableLog;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
@@ -17,6 +18,13 @@ public class MyImportSelector implements ImportSelector {
      */
     @Override
     public String[] selectImports(AnnotationMetadata annotationMetadata) {
+
+        /**
+         * 这里可以获取注解的详细信息！
+         * 然后根据注解的详细信息，返回需要被spring容器管理的Bean！
+         */
+        System.out.println(annotationMetadata.getAllAnnotationAttributes(EnableLog.class.getName()));
+
         return new String[]{
                 "com.ypy.springinactionnine.importannotation.User",
                 "com.ypy.springinactionnine.importannotation.Role",
