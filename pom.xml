@@ -12,6 +12,7 @@
         <module>springbootinaction</module>
         <module>springbootinactiontwo</module>
         <module>springbootinactionseven</module>
+        <module>springbootinactionnine</module>
     </modules>
 
     <!--第一步：继承Springboot父的Model-->
