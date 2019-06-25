@@ -1,0 +1,25 @@
+一、重点：@Enable*可以开启一系列的新特性
+（1）@EnableConfigurationProperties + @ConfigurationProperties，结合在一起使用，开启新特性，可以实现从配置文件中，读取属性赋值给Bean的属性。
+（2）@EnableASync + @Async，结合一起使用，开启新特性：实现方法的异步执行。
+
+二、难点：@Enable*的实现原理
+（1）@EnableConfigurationProperties、@EnableAsync的实现类，都是基于@Import注解实现其功能
+（2）@Import注解使用需要基于：ImportSelector接口或者ImportBeanDefinationRegister接口的实现类
+（3）ImportSelector接口或者ImportBeanDefinationRegister接口实现的功能都是类似的：
+--ImportSelector的实现类的返回值，都是类的全路径，容器会加载这些类到容器中
+--ImportBeanDefinationRegister的实现类的方法中，有一个BeanDefinationRegister对象，可以直接注入对象到容器中
+
+三、@Import注解的详细说明
+（1）可以导入Bean对象或者配置类对象到容器中
+（2）导入配置类对象，配置类只定义的Bean都会导入到容器中
+（3）对象或者配置类，都不需要在写@Component或者@Configuration，使用@Import(XXX.class)方式导入
+
+四、ImportSelector接口的详细说明
+（1）和@Import注解一起使用
+（2）实现类的方法返回值将导入到容器
+（3）实现的方法中，可以动态获取自定义注解的参数
+
+五、ImportBeanDefinationRegister接口的详细说明
+（1）和@Import注解一起使用
+（2）将Bean直接导入到容器中
+（3）实现的方法中，可以动态获取自定义注解的参数
