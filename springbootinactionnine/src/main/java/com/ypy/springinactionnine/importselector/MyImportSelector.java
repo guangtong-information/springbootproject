@@ -28,7 +28,7 @@ public class MyImportSelector implements ImportSelector {
         return new String[]{
                 "com.ypy.springinactionnine.importannotation.User",
                 "com.ypy.springinactionnine.importannotation.Role",
-                "com.ypy.springinactionnine.importannotation.MyConfigration"
+                "com.ypy.springinactionnine.importannotation.MyConfiguration"
         };
     }
 }

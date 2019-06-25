@@ -2,7 +2,7 @@ package com.ypy.springinactionnine.importannotation;
 
 import org.springframework.context.annotation.Bean;
 
-public class MyConfigration {
+public class MyConfiguration {
 
     @Bean
     public Runnable createRunnable(){
