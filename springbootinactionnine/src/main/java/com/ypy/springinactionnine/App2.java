@@ -1,6 +1,7 @@
 package com.ypy.springinactionnine;
 
 import com.ypy.springinactionnine.async.Jeep;
+import com.ypy.springinactionnine.async.Jeep2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -22,6 +23,7 @@ public class App2 {
     public static void main(String[] args) {
         ConfigurableApplicationContext configurableApplicationContext = SpringApplication.run(App2.class,args);
         configurableApplicationContext.getBean(Runnable.class).run();
+        configurableApplicationContext.getBean(Jeep2.class).test();
         System.out.println("----------end----------");
 //        configurableApplicationContext.close();
     }
