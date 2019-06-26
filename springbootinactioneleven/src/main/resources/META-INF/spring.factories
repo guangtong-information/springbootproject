@@ -1,0 +1,2 @@
+# 第三步：配置监听，方式五，配置方式
+org.springframework.context.ApplicationListener=com.ypy.springbootinactioneleven.elevenevent.event.MyAppliactionListener
