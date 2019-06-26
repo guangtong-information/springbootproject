@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ypy.tencorebean.Role,com.ypy.tencorebean.RunnableConfiguration,com.ypy.tencorebean.UserConfiguration
