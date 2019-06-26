@@ -1,2 +1,5 @@
 # 第三步：配置监听，方式五，配置方式
-org.springframework.context.ApplicationListener=com.ypy.springbootinactioneleven.elevenevent.event.MyAppliactionListener
+#org.springframework.context.ApplicationListener=com.ypy.springbootinactioneleven.elevenevent.event.MyAppliactionListener
+
+# 第二步：配置方式，方式三，使用配置方式，将容器初始化回调添加到容器
+org.springframework.context.ApplicationContextInitializer=com.ypy.springbootinactioneleven.twelveextend.applicationContextInitializer.MyApplicationContextInitializer

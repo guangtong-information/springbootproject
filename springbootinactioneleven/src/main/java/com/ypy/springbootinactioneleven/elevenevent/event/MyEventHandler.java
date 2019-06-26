@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * 第三步：配置监听，方式四，编码方式，使用@EventListener注解
  */
-//@Component
+@Component
 public class MyEventHandler {
 
     /**
