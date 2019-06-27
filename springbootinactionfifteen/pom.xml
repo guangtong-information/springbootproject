@@ -31,9 +31,15 @@
         </dependency>
 
         <!--Springboot默认不支持jsp的使用！！！-->
-        <dependency>
+        <!--<dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>-->
+
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-jsp</artifactId>
+            <version>9.3.0.M1</version>
         </dependency>
 
         <!--使用freemarker模板-->
