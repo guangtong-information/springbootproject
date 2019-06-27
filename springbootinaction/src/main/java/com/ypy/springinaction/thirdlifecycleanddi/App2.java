@@ -4,7 +4,7 @@ import com.ypy.springinaction.thirdlifecycleanddi.di.Person;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
- * 知识点2：
+ * 知识点2：依赖注入
  */
 public class App2 {
 
