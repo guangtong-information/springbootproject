@@ -16,6 +16,7 @@
         <module>springbootinactionten</module>
         <module>tencorebean</module>
         <module>springbootinactioneleven</module>
+        <module>springbootinactionfifteen</module>
     </modules>
 
     <!--第一步：继承Springboot父的Model-->
