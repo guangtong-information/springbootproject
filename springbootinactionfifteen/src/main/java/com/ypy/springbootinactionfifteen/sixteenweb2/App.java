@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * （4）（不推荐修改）可以在配置文件中修改spring.resources静态资源路径：spring.resources.static-locations=classpath:/html
  *      http://127.0.0.1:8080/reg.html
  *
- *  注意：在springboot 在idea多模块下 子模块的web项目用内置tomcat启动访问jsp报404
+ *  注意：在springboot 在idea多模块下 子模块的web项目用内置tomcat启动访问静态报404
  *  解决方案：https://blog.csdn.net/qq_34657993/article/details/79070084
  *  或者查看笔记：
  * “springboot 在idea多模块下 子模块的web项目用内置tomcat启动访问jsp报404 - qq_34657993的博客 - CSDN博客”
