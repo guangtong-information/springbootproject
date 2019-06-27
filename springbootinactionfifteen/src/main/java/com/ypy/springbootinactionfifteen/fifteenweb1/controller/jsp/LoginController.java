@@ -27,6 +27,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class LoginController {
+
     @PostMapping("/login")
     public String login(@RequestParam(value = "username") String username, @RequestParam("password") String password){
         if (username.equals(password)){
@@ -34,5 +35,16 @@ public class LoginController {
         } else {
             return "fail";//根据配置文件中定义，系统去找./WEB-INF/jsp/fail.jsp
         }
+    }
+
+    /**
+     * 知识点8：Model等同于“域对象”（page、request、session、application），用于传递参数
+     * URL:
+     * http://127.0.0.1:8080/login?username=123
+     */
+    @GetMapping("login")
+    public String loginIndex(@RequestParam(value = "username")String username, Model model){
+        model.addAttribute("username",username);
+        return "login";
     }
 }
