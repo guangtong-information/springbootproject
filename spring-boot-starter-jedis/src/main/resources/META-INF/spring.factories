@@ -1,1 +1,2 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ypy.springbootstartjedis.RedisAutoConfiguration
+#让容器自动加载第三方jar的Bean，推荐的方式
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ypy.springbootstartjedis.RedisAutoConfiguration
