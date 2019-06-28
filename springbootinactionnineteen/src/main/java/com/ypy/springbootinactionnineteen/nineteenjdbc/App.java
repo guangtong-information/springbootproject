@@ -60,9 +60,11 @@ import java.sql.SQLException;
  * <version>1.1.16</version>
  * </dependency>
  * 第二步：在配置文件启用连接池
+ *spring.datasource.type=com.alibaba.druid.pool.DruidDataSource
+ * 第三步：或者使用配置类，编码方式装配DataSource，DataSourceConfig
  *
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.ypy.springbootinactionnineteen.nineteenjdbc.datasourceconfig"})
 public class App {
 
     public static void main(String[] args) throws SQLException {
