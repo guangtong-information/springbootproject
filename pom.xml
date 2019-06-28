@@ -18,6 +18,7 @@
         <module>springbootinactioneleven</module>
         <module>springbootinactionfifteen</module>
         <module>springbootinactionnineteen</module>
+        <module>spring-boot-starter-jedis</module>
     </modules>
 
     <!--第一步：继承Springboot父的Model-->

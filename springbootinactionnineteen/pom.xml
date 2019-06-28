@@ -54,6 +54,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
+
+        <!--自定义starter启动类-->
+        <dependency>
+            <groupId>com.ypy.springboot</groupId>
+            <artifactId>spring-boot-starter-jedis</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>
