@@ -1,0 +1,19 @@
+# springboot监控端点的配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # *代表启用所有的监控端点，默认情况下，这些端点都是被禁用的
+  endpoint:
+    beans:
+      enabled: false # 关闭以后，不显示http://127.0.0.1:8080/actuator/beans
+    health:
+      show-details: always #查看详细的应用健康信息需要配置
+
+# spring数据源的配置 应用启动的时候就会检查数据库的链接状态！
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://127.0.0.1:3306/demo_test1
+#    username: root
+#    password: root
