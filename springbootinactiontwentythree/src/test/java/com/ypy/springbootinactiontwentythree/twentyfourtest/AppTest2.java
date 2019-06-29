@@ -20,7 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @date 2019/4/17
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = TestBeanConfiguration.class)
+@SpringBootTest(classes = {TestBeanConfiguration.class,App.class})
 public class AppTest2 {
 
     @Autowired

@@ -25,7 +25,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  *  （3）注意：一定要定义主启动类
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = {App.class})//指定启动类，可以不指定，当前程序会主动查找
 public class AppTest {
 
     @Autowired
