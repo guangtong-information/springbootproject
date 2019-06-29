@@ -13,10 +13,17 @@
 
     <dependencies>
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
-        </dependency>-->
+            <exclusions>
+                <!--排除默认的logback依赖-->
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
         <!--spring-boot-started-jdbc将自动引入spring-boot-started-->
         <dependency>
@@ -60,6 +67,12 @@
             <groupId>com.ypy.springboot</groupId>
             <artifactId>spring-boot-starter-jedis</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--引入第三方log4j2的依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
     </dependencies>
 
