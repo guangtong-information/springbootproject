@@ -6,10 +6,13 @@ import com.ypy.mallproduct.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 @RestController
 public class ProductController {
 
-    @Autowired
+//    @Autowired
+    @Resource
     private ProductMapper productMapper;
 
     /**
@@ -42,7 +45,7 @@ public class ProductController {
     /**
      * 请求地址：http://127.0.0.1:8080/get/2
      */
-    @DeleteMapping("/del/{id}")
+    @GetMapping("/get/{id}")
     public Object get(@PathVariable("id") Integer id) {
         Product product = productMapper.getById(id);
         return new Response("200", "ok", product);
