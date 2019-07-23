@@ -92,6 +92,15 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
+
+        <!--服务的注册方：调用zookeeper-->
+        <!--【注意】：curator-x-discovery-server版本，需要和zookeeper保持一致！-->
+        <!--zookeeper使用zookeeper-3.4.13版本，所以当前选择2.11.0版本-->
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-x-discovery-server</artifactId>
+            <version>2.11.0</version>
+        </dependency>
     </dependencies>
 
 </project>
