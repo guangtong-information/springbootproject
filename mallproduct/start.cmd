@@ -1,0 +1,1 @@
+java -Djava.ext.dirs=D:/mallproduct/target/product/lib com.ypy.mallproduct.App
