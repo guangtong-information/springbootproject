@@ -39,11 +39,14 @@ public class App3 {
 
         // 第三步：调用模拟的负载均衡器
         LoadBalance loadBalance = new LoadBalance(services);
-        RestTemplate restTemplate = new RestTemplate();
-        System.out.println(loadBalance.choose());
-        String body = restTemplate.getForObject("http://" + loadBalance.choose() + "/get/1",String.class);
-        Response response = new Gson().fromJson(body,Response.class);
-        System.out.println(response);
+        for (int i=0;i<10;i++) {
+            RestTemplate restTemplate = new RestTemplate();
+            String service = loadBalance.choose();
+            System.out.println(service);
+            String body = restTemplate.getForObject("http://" + service + "/list",String.class);
+            Response response = new Gson().fromJson(body,Response.class);
+            System.out.println(response);
+        }
     }
 
 }
