@@ -9,14 +9,15 @@ import java.util.concurrent.TimeUnit;
 public class Jeep2 {
     
     @Async
-    public void test() {
+    public boolean test() {
         try{
             for(int i=1;i<3;i++){
-                System.out.println("----------------"+i);
+                System.out.println(Thread.currentThread().getName() + "----------------"+i);
                 TimeUnit.SECONDS.sleep(1);
             }
         }catch (Exception e){
             e.printStackTrace();
         }
+        return true;
     }
 }
